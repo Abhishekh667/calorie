@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../core/config/api_config.dart';
 import 'chat_history_provider.dart';
 
 class ChatMessage {
@@ -57,7 +58,7 @@ class AskMeNotifier extends StateNotifier<AskMeState> {
 
   AskMeNotifier(this._history) : super(AskMeState());
 
-  static const String _apiKey = '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';
+  static const String _apiKey = ApiConfig.openRouterKey;
   static const String _model = 'openrouter/owl-alpha';
 
   static const String _systemPrompt = '''

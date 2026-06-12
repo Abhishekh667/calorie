@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
+import '../config/api_config.dart';
 
 class FoodAnalysisResult {
   final String name;
@@ -19,8 +20,7 @@ class FoodAnalysisResult {
 }
 
 class AIService {
-  static const String _apiKey =
-      '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';
+  static const String _apiKey = ApiConfig.openRouterKey;
   static const String _baseUrl = 'https://openrouter.ai/api/v1';
   static const String _model = 'google/gemma-4-31b-it:free';
 

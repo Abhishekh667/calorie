@@ -17,3 +17,5 @@ build/
 .flutter-plugins-dependencies
 .env
 .DS_Store
+# API keys
+lib/core/config/api_config.dart
